@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試合結果 - LYNX T.C.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <img src="image0.jpeg" alt="LYNX T.C. Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">LYNX T.C.</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-right">
+            <a href="https://www.instagram.com/lynx_tf2026/" target="_blank" class="insta-link">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="results.html">試合結果</a></li>
+            <li><a href="records.html">LYNX記録</a></li>
+            <li><a href="members.html">所属選手</a></li>
+            <li><a href="#schedule">年間予定</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main class="results-page">
+        <aside class="sidebar">
+            <h3>年度別</h3>
+            <ul class="year-list">
+                <li><a href="#r8">2026年度結果</a></li>
+            </ul>
+        </aside>
+
+        <div class="results-content">
+            <h2 id="r8" class="year-title">2026年度大会結果</h2>
+
+            <div class="event-section">
+                <h3 class="event-title">2/11 第79回府中駅伝競走大会</h3>
+                <div class="event-details">
+                    <p class="category-result">一般の部　4位　1:07:07</p>
+                    <ul class="runner-list">
+                        <li><span class="leg">1区 (4.3km)</span> <span class="name">土屋勇陽</span> <span class="time">13:36</span> <span class="rank">区間19位</span></li>
+                        <li><span class="leg">2区 (4.1km)</span> <span class="name">星野拓海</span> <span class="time">12:55</span> <span class="rank">区間5位</span></li>
+                        <li><span class="leg">3区 (4.1km)</span> <span class="name">足達栄信</span> <span class="time">14:21</span> <span class="rank">区間28位</span></li>
+                        <li><span class="leg">4区 (4.1km)</span> <span class="name">福田駿将</span> <span class="time">12:58</span> <span class="rank">区間3位</span></li>
+                        <li><span class="leg">5区 (4.1km)</span> <span class="name">戸栗新太</span> <span class="time">13:17</span> <span class="rank">区間6位</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="event-section">
+                <h3 class="event-title">1/12 第78回大田区周回駅伝グリーン駅伝大会</h3>
+                <div class="event-details">
+                    <p class="category-result">一般の部　1位　1:13:37</p>
+                    <ul class="runner-list">
+                        <li><span class="leg">1区 (5.6km)</span> <span class="name">星野拓海</span> <span class="time">18:16</span> <span class="rank">区間2位</span></li>
+                        <li><span class="leg">2区 (5.6km)</span> <span class="name">土屋勇陽</span> <span class="time">18:28</span> <span class="rank">区間2位</span></li>
+                        <li><span class="leg">3区 (5.6km)</span> <span class="name">戸栗新太</span> <span class="time">18:59</span> <span class="rank">区間3位</span></li>
+                        <li><span class="leg">4区 (5.6km)</span> <span class="name">福田駿将</span> <span class="time">17:54</span> <span class="rank">区間1位</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('side-menu');
+
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            btn.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
