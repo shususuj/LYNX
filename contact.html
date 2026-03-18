@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - LYNX T.C.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <img src="image0.jpeg" alt="LYNX T.C. Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">LYNX T.C.</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-right">
+            <a href="https://www.instagram.com/lynx_tf2026/" target="_blank" class="insta-link">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="results.html">試合結果</a></li>
+            <li><a href="records.html">LYNX記録</a></li>
+            <li><a href="members.html">所属選手</a></li>
+            <li><a href="#schedule">年間予定</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-page">
+        <h2 class="page-title">お問い合わせ</h2>
+
+        <div class="contact-info">
+            <p>入部希望、練習参加のお申し込みなど、その他のお問い合わせは以下のメールアドレス、または公式Instagramのダイレクトメッセージ(DM)よりお気軽にご連絡ください。</p>
+
+            <div class="contact-method">
+                <h3>メールでのお問い合わせ</h3>
+                <p>以下のメールアドレスをクリックすると、お使いのメールソフトが起動します。</p>
+                <p class="email-address"><a href="mailto:lynx.t.c2026@gmail.com">lynx.t.c2026@gmail.com</a></p>
+            </div>
+
+            <div class="contact-method">
+                <h3>Instagram (ダイレクトメッセージ)</h3>
+                <p>公式InstagramのDMでも受け付けております。フォローもお待ちしております。</p>
+                <a href="https://www.instagram.com/lynx_tf2026/" target="_blank" class="btn-black">
+                    @lynx_tf2026 を開く
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('side-menu');
+
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            btn.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
