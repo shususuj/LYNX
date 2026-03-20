@@ -10,7 +10,9 @@ body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: #1a1a1a;
     line-height: 1.6;
-    padding-top: 100px; /* ヘッダーの高さに合わせて調整（少し大きくしました） */
+    padding-top: 100px;
+    min-width: 1000px; /* ★追加: スマホでもパソコンの幅を維持する */
+    -webkit-text-size-adjust: 100%; /* ★追加: スマホが勝手に文字を大きくするのを防ぐ */
 }
 a {
     text-decoration: none;
@@ -26,7 +28,8 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* ヘッダーの高さを大きくしました (以前は80px) */
+    min-width: 1000px; /* ★追加: ヘッダーもPC幅で固定 */
+    height: 100px;
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
@@ -44,11 +47,11 @@ ul {
     gap: 15px;
 }
 .logo-img {
-    height: 70px; /* ロゴ画像の高さを大きくしました (以前は50px) */
+    height: 70px;
     width: auto;
 }
 .logo-main {
-    font-size: 32px; /* LYNX T.C.の文字を大きくしました (以前は24px) */
+    font-size: 32px;
     font-weight: bold;
     letter-spacing: 0.05em;
 }
@@ -69,12 +72,11 @@ ul {
     opacity: 0.6;
 }
 
-/* 3本線ボタン（黒背景に変更） */
+/* 3本線ボタン（黒背景） */
 .hamburger {
     width: 80px;
     height: 100%;
-    background-color: #111; /* 黒色 */
-    border: none;
+    background-color: #111;
     border: none;
     cursor: pointer;
     display: flex;
@@ -83,7 +85,7 @@ ul {
     align-items: center;
     gap: 8px;
     padding: 0;
-    z-index: 1001; /* メニューより上に */
+    z-index: 1001;
 }
 .hamburger span {
     display: block;
@@ -107,8 +109,8 @@ ul {
 /* スライドメニュー */
 .side-menu {
     position: fixed;
-    top: 100px; /* ヘッダーの高さに合わせて調整 */
-    right: -300px; /* 初期状態は画面外 */
+    top: 100px;
+    right: -300px;
     width: 300px;
     height: calc(100vh - 100px);
     background-color: #f4f4f4;
@@ -118,7 +120,7 @@ ul {
     padding: 20px 0;
 }
 .side-menu.active {
-    right: 0; /* クラスが付与されたらスライドイン */
+    right: 0;
 }
 .side-menu ul li a {
     display: block;
@@ -135,7 +137,7 @@ ul {
 /* トップ画像エリア */
 .hero {
     height: 60vh;
-    background-image: url('image1.jpeg'); /* アップロードされた画像 */
+    background-image: url('image1.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -148,7 +150,7 @@ ul {
     font-weight: normal;
     font-style: italic;
     letter-spacing: 0.05em;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 文字を読みやすくする影 */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* ビジョンエリア */
@@ -199,10 +201,10 @@ ul {
 .sidebar {
     width: 240px;
     flex-shrink: 0;
-    background-color: #f4f4f4; /* 薄いグレーの背景 */
+    background-color: #f4f4f4;
 }
 .sidebar h3 {
-    background-color: #111; /* ★青緑から黒に変更 */
+    background-color: #111;
     color: #fff;
     padding: 12px 15px;
     font-size: 16px;
@@ -230,7 +232,7 @@ ul {
 }
 .year-list a::before {
     content: '●'; 
-    color: #111; /* ★青から黒に変更 */
+    color: #111;
     position: absolute;
     left: 12px;
     font-size: 10px;
@@ -248,13 +250,13 @@ ul {
 
 /* 大見出し（R8年度大会結果など） */
 .year-title {
-    background-color: #111; /* ★濃い青から黒に変更 */
+    background-color: #111;
     color: #fff;
     padding: 10px 15px;
     font-size: 18px;
     margin: 0 0 25px 0;
     border: 2px solid #fff;
-    outline: 2px solid #111; /* ★濃い青から黒に変更 */
+    outline: 2px solid #111;
 }
 
 /* 各大会のブロック */
@@ -265,8 +267,8 @@ ul {
 /* 大会名 */
 .event-title {
     background-color: #f0f0f0;
-    border-top: 2px solid #111; /* ★濃い青から黒に変更 */
-    border-bottom: 2px solid #111; /* ★濃い青から黒に変更 */
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
     padding: 8px 10px;
     font-size: 16px;
     font-weight: bold;
@@ -292,36 +294,20 @@ ul {
 }
 .runner-list li {
     display: flex;
-    gap: 15px; /* 各項目の間隔 */
+    gap: 15px;
     margin-bottom: 4px;
 }
 .runner-list .leg {
-    width: 100px; /* 区間・距離の幅 */
+    width: 100px;
 }
 .runner-list .name {
-    width: 80px;  /* 名前の幅 */
+    width: 80px;
 }
 .runner-list .time {
-    width: 50px;  /* タイムの幅 */
+    width: 50px;
 }
 .runner-list .rank {
-    width: 80px;  /* 順位の幅 */
-}
-
-/* スマホ閲覧時のレイアウト（縦並びにする） */
-@media (max-width: 768px) {
-    .results-page {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-    }
-    .runner-list li {
-        font-size: 14px;
-        gap: 5px;
-    }
-    .runner-list .leg { width: 80px; }
-    .runner-list .name { width: 70px; }
+    width: 80px;
 }
 
 /* =========================================
@@ -355,7 +341,7 @@ ul {
 .member-name {
     font-size: 28px;
     font-weight: normal;
-    letter-spacing: 0.1em; /* 文字の間に少し隙間を空ける */
+    letter-spacing: 0.1em;
 }
 .member-role {
     font-size: 16px;
@@ -375,7 +361,7 @@ ul {
     gap: 5px;
 }
 .history-badge {
-    background-color: #1a1a1a; /* ほぼ黒 */
+    background-color: #1a1a1a;
     color: #fff;
     padding: 5px 12px;
     font-size: 14px;
@@ -394,21 +380,12 @@ ul {
     align-items: baseline;
 }
 .record-line .event {
-    width: 80px; /* 種目名の幅を固定して、タイムの開始位置を揃える */
+    width: 130px; /* ★修正: ハーフマラソンが入るように幅を80pxから130pxに拡大 */
     display: inline-block;
+    white-space: nowrap; /* ★追加: 枠をはみ出しても絶対に改行させない */
 }
 .record-line .time {
     display: inline-block;
-}
-
-/* スマホ閲覧時の微調整 */
-@media (max-width: 768px) {
-    .member-header {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .member-name { font-size: 24px; }
-    .member-birth { font-size: 16px; }
 }
 
 /* =========================================
@@ -424,14 +401,14 @@ ul {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* ボタン同士の隙間 */
+    gap: 30px;
 }
 
 /* 大きな選択ボタン */
 .portal-btn {
     display: block;
     position: relative;
-    background-color: #111; /* 黒色 */
+    background-color: #111;
     color: #fff;
     text-align: center;
     padding: 50px 20px;
@@ -443,27 +420,19 @@ ul {
 }
 
 .portal-btn:hover {
-    background-color: #333; /* マウスを乗せたら少し明るい黒に */
+    background-color: #333;
 }
 
-/* 右下の矢印ボックス（東海大デザインのオマージュ） */
+/* 右下の矢印ボックス */
 .portal-btn .arrow-box {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #000; /* より濃い黒 */
+    background-color: #000;
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); /* 左側を斜めにカット */
-}
-
-/* スマホ閲覧時の微調整 */
-@media (max-width: 768px) {
-    .portal-btn {
-        padding: 40px 15px;
-        font-size: 20px;
-    }
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* =========================================
@@ -482,7 +451,7 @@ ul {
 
 .contact-method {
     background-color: #f9f9f9;
-    border-left: 6px solid #111; /* 黒のアクセントライン */
+    border-left: 6px solid #111;
     padding: 25px;
     margin-top: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -502,12 +471,12 @@ ul {
     font-weight: bold;
     color: #111;
     text-decoration: underline;
-    word-break: break-all; /* スマホでメールアドレスがはみ出さないようにする */
+    word-break: break-all;
     transition: color 0.3s;
 }
 
 .email-address a:hover {
-    color: #666; /* マウスを乗せたら少し薄く */
+    color: #666;
 }
 
 /* 黒いボタン */
@@ -524,14 +493,7 @@ ul {
 }
 
 .btn-black:hover {
-    background-color: #444; /* マウスを乗せたら少し明るく */
-}
-
-/* スマホ閲覧時の微調整 */
-@media (max-width: 768px) {
-    .email-address a {
-        font-size: 20px;
-    }
+    background-color: #444;
 }
 
 /* =========================================
@@ -575,17 +537,17 @@ ul {
     color: #fff;
     padding: 10px 15px;
     margin: 0 0 15px 0;
-    border-left: 8px solid #666; /* 少しグレーをアクセントに */
+    border-left: 8px solid #666;
 }
 
 /* テーブル設定 */
 .table-scroll {
-    overflow-x: auto; /* スマホで横スクロールできるようにする */
+    overflow-x: auto;
     margin-bottom: 60px;
 }
 .top10-table {
     width: 100%;
-    min-width: 600px; /* テーブルが崩れない最低幅 */
+    min-width: 600px;
     border-collapse: collapse;
 }
 .top10-table th {
@@ -602,7 +564,6 @@ ul {
     border-bottom: 1px solid #ddd;
     color: #333;
 }
-/* 1位〜3位の順位を少し目立たせる */
 .top10-table tr:nth-child(1) td:first-child { font-weight: bold; color: #d4af37; } /* 金 */
 .top10-table tr:nth-child(2) td:first-child { font-weight: bold; color: #9e9e9e; } /* 銀 */
 .top10-table tr:nth-child(3) td:first-child { font-weight: bold; color: #c47644; } /* 銅 */
@@ -637,11 +598,11 @@ ul {
     text-decoration: underline;
 }
 
-/* タイトル（青学記録風の左線＋下線デザイン） */
+/* タイトル */
 .ekiden-page-title {
     font-size: 24px;
     color: #111;
-    border-left: 8px solid #111; /* 黒の太線 */
+    border-left: 8px solid #111;
     padding: 5px 0 5px 15px;
     margin-bottom: 30px;
     border-bottom: 1px dotted #ccc;
@@ -657,29 +618,24 @@ ul {
     letter-spacing: 0.05em;
 }
 
-/* テーブル設定（中央揃え・黒ベース） */
+/* テーブル設定 */
 .ekiden-record-table {
     width: 100%;
     min-width: 650px;
     border-collapse: collapse;
-    text-align: center; /* 表の中の文字をすべて中央揃えに */
+    text-align: center;
 }
-
-/* テーブルのヘッダー（黒背景に白文字） */
 .ekiden-record-table th {
     background-color: #111;
     color: #fff;
     padding: 12px 10px;
-    border: 1px solid #444; /* ヘッダー同士の区切り線 */
+    border: 1px solid #444;
     font-weight: normal;
     white-space: nowrap;
 }
-
-/* テーブルの中身 */
 .ekiden-record-table td {
     padding: 15px 10px;
     border: 1px solid #ddd;
     color: #333;
     vertical-align: middle;
 }
-
