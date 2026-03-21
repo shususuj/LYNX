@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年間予定 - LYNX T.C.</title>
+    <link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <img src="image0.jpeg" alt="LYNX T.C. Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">LYNX T.C.</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="header-right">
+            <a href="https://www.instagram.com/lynx_tf2026/" target="_blank" class="insta-link">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="results.html">試合結果</a></li>
+            <li><a href="records.html">LYNX記録</a></li>
+            <li><a href="members.html">所属選手</a></li>
+            <li><a href="schedule.html">年間予定</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main class="calendar-page">
+        <div class="calendar-header">
+            <button class="calendar-nav-btn" id="prev-btn" onclick="changeMonth(-1)" style="visibility: hidden;">〈 前の月</button>
+            <h2 class="calendar-title" id="month-title">2026年3月</h2>
+            <button class="calendar-nav-btn" id="next-btn" onclick="changeMonth(1)">次の月 〉</button>
+        </div>
+
+        <div class="calendar-month active" id="month-3">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                            <td><span class="date-num">1</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">2</span></td>
+                            <td><span class="date-num">3</span></td>
+                            <td><span class="date-num">4</span></td>
+                            <td><span class="date-num">5</span></td>
+                            <td><span class="date-num">6</span></td>
+                            <td><span class="date-num">7</span></td>
+                            <td><span class="date-num">8</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">9</span></td>
+                            <td><span class="date-num">10</span></td>
+                            <td><span class="date-num">11</span></td>
+                            <td><span class="date-num">12</span></td>
+                            <td><span class="date-num">13</span></td>
+                            <td><span class="date-num">14</span></td>
+                            <td><span class="date-num">15</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">16</span></td>
+                            <td><span class="date-num">17</span></td>
+                            <td><span class="date-num">18</span></td>
+                            <td><span class="date-num">19</span></td>
+                            <td><span class="date-num">20</span></td>
+                            <td><span class="date-num">21</span></td>
+                            <td><span class="date-num">22</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">23</span></td>
+                            <td><span class="date-num">24</span></td>
+                            <td><span class="date-num">25</span></td>
+                            <td><span class="date-num">26</span></td>
+                            <td><span class="date-num">27</span></td>
+                            <td><span class="date-num">28</span></td>
+                            <td><span class="date-num">29</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">30</span></td>
+                            <td><span class="date-num">31</span></td>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="calendar-month" id="month-4">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td>
+                            <td><span class="date-num">1</span></td>
+                            <td><span class="date-num">2</span></td>
+                            <td><span class="date-num">3</span></td>
+                            <td><span class="date-num">4</span></td>
+                            <td><span class="date-num">5</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">6</span></td>
+                            <td><span class="date-num">7</span></td>
+                            <td><span class="date-num">8</span></td>
+                            <td><span class="date-num">9</span></td>
+                            <td><span class="date-num">10</span></td>
+                            <td>
+                                <span class="date-num">11</span>
+                                <span class="event-badge bg-black">横浜市民スポーツ大会</span>
+                            </td>
+                            <td><span class="date-num">12</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">13</span></td>
+                            <td><span class="date-num">14</span></td>
+                            <td><span class="date-num">15</span></td>
+                            <td><span class="date-num">16</span></td>
+                            <td><span class="date-num">17</span></td>
+                            <td><span class="date-num">18</span></td>
+                            <td><span class="date-num">19</span><span class="event-badge bg-black">横浜市民スポーツ大会</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">20</span></td>
+                            <td><span class="date-num">21</span></td>
+                            <td><span class="date-num">22</span></td>
+                            <td><span class="date-num">23</span></td>
+                            <td><span class="date-num">24</span></td>
+                            <td><span class="date-num">25</span></td>
+                            <td><span class="date-num">26</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">27</span></td>
+                            <td><span class="date-num">28</span></td>
+                            <td><span class="date-num">29</span></td>
+                            <td><span class="date-num">30</span></td>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="calendar-month" id="month-5">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                            <td><span class="date-num">1</span></td>
+                            <td><span class="date-num">2</span></td>
+                            <td><span class="date-num">3</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">4</span></td>
+                            <td><span class="date-num">5</span></td>
+                            <td><span class="date-num">6</span></td>
+                            <td><span class="date-num">7</span></td>
+                            <td><span class="date-num">8</span></td>
+                            <td><span class="date-num">9</span></td>
+                            <td><span class="date-num">10</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">11</span></td>
+                            <td><span class="date-num">12</span></td>
+                            <td><span class="date-num">13</span></td>
+                            <td><span class="date-num">14</span></td>
+                            <td><span class="date-num">15</span></td>
+                            <td><span class="date-num">16</span></td>
+                            <td><span class="date-num">17</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">18</span></td>
+                            <td><span class="date-num">19</span></td>
+                            <td><span class="date-num">20</span></td>
+                            <td><span class="date-num">21</span></td>
+                            <td><span class="date-num">22</span></td>
+                            <td><span class="date-num">23</span></td>
+                            <td><span class="date-num">24</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">25</span></td>
+                            <td><span class="date-num">26</span></td>
+                            <td><span class="date-num">27</span></td>
+                            <td><span class="date-num">28</span></td>
+                            <td><span class="date-num">29</span></td>
+                            <td><span class="date-num">30</span></td>
+                            <td><span class="date-num">31</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // ハンバーガーメニューの処理
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('side-menu');
+
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            btn.classList.toggle('active');
+        });
+
+        // =====================================
+        // カレンダー切り替えの処理
+        // =====================================
+        const monthsData = [
+            { id: 'month-3', title: '2026年3月' },
+            { id: 'month-4', title: '2026年4月' },
+            { id: 'month-5', title: '2026年5月' }
+            // 6月以降を追加する場合はここに書き足します
+        ];
+        
+        let currentMonthIndex = 0; // 最初は3月（配列の0番目）を表示
+
+        function changeMonth(step) {
+            // 今表示されている月を隠す
+            document.getElementById(monthsData[currentMonthIndex].id).classList.remove('active');
+            
+            // 次に見る月を計算
+            currentMonthIndex += step;
+            
+            // 新しい月を表示
+            document.getElementById(monthsData[currentMonthIndex].id).classList.add('active');
+            
+            // タイトル文字の書き換え
+            document.getElementById('month-title').textContent = monthsData[currentMonthIndex].title;
+            
+            // ボタンを隠すか表示するかのチェック
+            document.getElementById('prev-btn').style.visibility = currentMonthIndex === 0 ? 'hidden' : 'visible';
+            document.getElementById('next-btn').style.visibility = currentMonthIndex === monthsData.length - 1 ? 'hidden' : 'visible';
+        }
+    </script>
+</body>
+</html>

@@ -252,3 +252,122 @@ img {
         padding: 30px 15px;
     }
 }
+
+/* =========================================
+   カレンダーページ (schedule.html) - ブロック形式
+========================================= */
+.calendar-page {
+    padding: 60px 20px 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 上部の月切り替えナビゲーション */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.calendar-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    margin: 0;
+}
+.calendar-nav-btn {
+    border: 1px solid #004098; /* 青枠 */
+    color: #004098;
+    background-color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.calendar-nav-btn:hover {
+    background-color: #004098;
+    color: #fff;
+}
+
+/* カレンダーテーブルのベース */
+.calendar-table {
+    width: 100%;
+    min-width: 800px; /* スマホでも7日分が潰れない最低幅 */
+    border-collapse: collapse;
+    table-layout: fixed; /* 各曜日の幅を均等にする */
+}
+
+/* 曜日の見出し部分 */
+.calendar-table th {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc; /* 枠線を分かりやすい薄グレーに */
+}
+/* 平日はグレー、土曜は青、日曜は赤 */
+.calendar-table th { background-color: #666; }
+.calendar-table th.day-sat { background-color: #003366; }
+.calendar-table th.day-sun { background-color: #cc0000; }
+
+/* 日付のマス目（すべて真っ白に変更） */
+.calendar-table td {
+    border: 1px solid #ccc; /* 枠線を薄グレーに */
+    background-color: #fff; /* ★ここを真っ白(#fff)に変更しました */
+    height: 120px; /* マスの高さを固定 */
+    vertical-align: top;
+    padding: 5px;
+}
+.calendar-table td.active-cell,
+.calendar-table td.empty-cell {
+    background-color: #fff; /* 過去の日付や空のマスもすべて白で統一 */
+}
+
+/* 日付の数字 */
+.date-num {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+/* イベントのバッジ（色付きブロック） */
+.event-badge {
+    display: block;
+    color: #fff;
+    padding: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    line-height: 1.3;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* カレンダーの月切り替え用クラス */
+.calendar-month {
+    display: none; /* 基本はすべて隠す */
+    animation: fadeIn 0.3s ease; /* ふわっと表示させる */
+}
+.calendar-month.active {
+    display: block; /* activeが付いた月だけ表示する */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ボタンとして機能させるための調整 */
+button.calendar-nav-btn {
+    cursor: pointer;
+}
+
+/* 用途に応じた色の設定 */
+.bg-purple { background-color: #6a0dad; } /* 大会など */
+.bg-green  { background-color: #006400; } /* 式典など */
+.bg-blue   { background-color: #004b87; } /* 記録会など */
+
+/* ↓ここを追加（黒背景に白文字）↓ */
+.bg-black  { background-color: #000; color: #fff; }
