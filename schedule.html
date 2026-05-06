@@ -46,187 +46,353 @@
 
     <main class="calendar-page">
         <div class="calendar-header">
-            <button class="calendar-nav-btn" id="prev-btn" onclick="changeMonth(-1)" style="visibility: hidden;">〈 前の月</button>
+            <!-- 5月スタートなので「前の月」ボタンは表示しておく -->
+            <button class="calendar-nav-btn" id="prev-btn" onclick="changeMonth(-1)">〈 前の月</button>
             <h2 class="calendar-title" id="month-title">2026年5月</h2>
             <button class="calendar-nav-btn" id="next-btn" onclick="changeMonth(1)">次の月 〉</button>
         </div>
 
-        <div class="calendar-month active" id="month-3">
+        <!-- 3月 -->
+        <div class="calendar-month" id="month-3">
             <div class="table-scroll">
                 <table class="calendar-table">
                     <thead>
-                        <tr>
-                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
-                        </tr>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                            <td><span class="date-num">1</span></td>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">2</span></td>
-                            <td><span class="date-num">3</span></td>
-                            <td><span class="date-num">4</span></td>
-                            <td><span class="date-num">5</span></td>
-                            <td><span class="date-num">6</span></td>
-                            <td><span class="date-num">7</span></td>
-                            <td><span class="date-num">8</span></td>
+                            <td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">9</span></td>
-                            <td><span class="date-num">10</span></td>
-                            <td><span class="date-num">11</span></td>
-                            <td><span class="date-num">12</span></td>
-                            <td><span class="date-num">13</span></td>
-                            <td><span class="date-num">14</span></td>
-                            <td><span class="date-num">15</span></td>
+                            <td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">16</span></td>
-                            <td><span class="date-num">17</span></td>
-                            <td><span class="date-num">18</span></td>
-                            <td><span class="date-num">19</span></td>
-                            <td><span class="date-num">20</span></td>
-                            <td><span class="date-num">21</span></td>
-                            <td><span class="date-num">22</span></td>
+                            <td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">23</span></td>
-                            <td><span class="date-num">24</span></td>
-                            <td><span class="date-num">25</span></td>
-                            <td><span class="date-num">26</span><span class="event-badge bg-black">東海大記録会</span></td>
-                            <td><span class="date-num">27</span></td>
-                            <td><span class="date-num">28</span></td>
-                            <td><span class="date-num">29</span></td>
+                            <td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span><span class="event-badge bg-black">東海大記録会</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">30</span></td>
-                            <td><span class="date-num">31</span></td>
-                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                            <td><span class="date-num">30</span></td><td><span class="date-num">31</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
+        <!-- 4月 -->
         <div class="calendar-month" id="month-4">
             <div class="table-scroll">
                 <table class="calendar-table">
                     <thead>
-                        <tr>
-                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
-                        </tr>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="empty-cell"></td><td class="empty-cell"></td>
-                            <td><span class="date-num">1</span></td>
-                            <td><span class="date-num">2</span></td>
-                            <td><span class="date-num">3</span></td>
-                            <td><span class="date-num">4</span></td>
-                            <td><span class="date-num">5</span><span class="event-badge bg-black">川口市春季陸上競技記録会</span>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span><span class="event-badge bg-black">川口市春季陸上競技記録会</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">6</span></td>
-                            <td><span class="date-num">7</span></td>
-                            <td><span class="date-num">8</span></td>
-                            <td><span class="date-num">9</span></td>
-                            <td><span class="date-num">10</span></td>
-                            <td>
-                                <span class="date-num">11</span>
-                                <span class="event-badge bg-black">横浜市民スポーツ大会</span>
-                            </td>
-                            <td><span class="date-num">12</span></td>
+                            <td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span><span class="event-badge bg-black">横浜市民スポーツ大会</span></td><td><span class="date-num">12</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">13</span></td>
-                            <td><span class="date-num">14</span></td>
-                            <td><span class="date-num">15</span></td>
-                            <td><span class="date-num">16</span></td>
-                            <td><span class="date-num">17</span></td>
-                            <td><span class="date-num">18</span></td>
-                            <td><span class="date-num">19</span><span class="event-badge bg-black">横浜市民スポーツ大会</span></td>
+                            <td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span><span class="event-badge bg-black">横浜市民スポーツ大会</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">20</span></td>
-                            <td><span class="date-num">21</span></td>
-                            <td><span class="date-num">22</span></td>
-                            <td><span class="date-num">23</span></td>
-                            <td><span class="date-num">24</span></td>
-                            <td><span class="date-num">25</span></td>
-                            <td><span class="date-num">26</span></td>
+                            <td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">27</span></td>
-                            <td><span class="date-num">28</span></td>
-                            <td><span class="date-num">29</span><span class="event-badge bg-black">平成国際大記録会</span>
-                            <td><span class="date-num">30</span></td>
-                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                            <td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span><span class="event-badge bg-black">平成国際大記録会</span></td><td><span class="date-num">30</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <div class="calendar-month" id="month-5">
+        <!-- 5月（初期表示のためactiveクラスを付与） -->
+        <div class="calendar-month active" id="month-5">
             <div class="table-scroll">
                 <table class="calendar-table">
                     <thead>
-                        <tr>
-                            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th>
-                        </tr>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                            <td><span class="date-num">1</span></td>
-                            <td><span class="date-num">2</span></td>
-                            <td><span class="date-num">3</span></td>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">4</span></td>
-                            <td><span class="date-num">5</span></td>
-                            <td><span class="date-num">6</span></td>
-                            <td><span class="date-num">7</span></td>
-                            <td><span class="date-num">8</span></td>
-                            <td><span class="date-num">9</span></td>
-                            <td><span class="date-num">10</span></td>
+                            <td><span class="date-num">4</span></td><td><span class="date-num">5</span><span class="event-badge bg-black">WTTL・田園クラブ中距離記録挑戦会</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">11</span></td>
-                            <td><span class="date-num">12</span></td>
-                            <td><span class="date-num">13</span></td>
-                            <td><span class="date-num">14</span></td>
-                            <td><span class="date-num">15</span></td>
-                            <td><span class="date-num">16</span></td>
-                            <td><span class="date-num">17</span></td>
+                            <td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span><span class="event-badge bg-black">東日本実業団陸上選手権</span></td><td><span class="date-num">15</span><span class="event-badge bg-black">東日本実業団陸上選手権</span></td><td><span class="date-num">16</span><span class="event-badge bg-black">東日本実業団陸上選手権</span></td><td><span class="date-num">17</span><span class="event-badge bg-black">東日本実業団陸上選手権</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">18</span></td>
-                            <td><span class="date-num">19</span></td>
-                            <td><span class="date-num">20</span></td>
-                            <td><span class="date-num">21</span></td>
-                            <td><span class="date-num">22</span></td>
-                            <td><span class="date-num">23</span></td>
-                            <td><span class="date-num">24</span></td>
+                            <td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td>
                         </tr>
                         <tr>
-                            <td><span class="date-num">25</span></td>
-                            <td><span class="date-num">26</span></td>
-                            <td><span class="date-num">27</span></td>
-                            <td><span class="date-num">28</span></td>
-                            <td><span class="date-num">29</span></td>
-                            <td><span class="date-num">30</span></td>
-                            <td><span class="date-num">31</span></td>
+                            <td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td><span class="date-num">31</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        
-        
-        
+
+        <!-- 6月 -->
+        <div class="calendar-month" id="month-6">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span><span class="event-badge bg-black">15大学対抗戦(OP)</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span><span class="event-badge bg-black">8大学対抗戦)(OP)</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 7月 -->
+        <div class="calendar-month" id="month-7">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td><span class="date-num">31</span></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 8月 -->
+        <div class="calendar-month" id="month-8">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">31</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 9月 -->
+        <div class="calendar-month" id="month-9">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 10月 -->
+        <div class="calendar-month" id="month-10">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td><span class="date-num">31</span></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 11月 -->
+        <div class="calendar-month" id="month-11">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">30</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 12月 -->
+        <div class="calendar-month" id="month-12">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td><span class="date-num">31</span></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 2027年1月 -->
+        <div class="calendar-month" id="month-1">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td><td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td><td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td><td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td><td><span class="date-num">29</span></td><td><span class="date-num">30</span></td><td><span class="date-num">31</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 2027年2月 -->
+        <div class="calendar-month" id="month-2">
+            <div class="table-scroll">
+                <table class="calendar-table">
+                    <thead>
+                        <tr><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="day-sat">土</th><th class="day-sun">日</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="date-num">1</span></td><td><span class="date-num">2</span></td><td><span class="date-num">3</span></td><td><span class="date-num">4</span></td><td><span class="date-num">5</span></td><td><span class="date-num">6</span></td><td><span class="date-num">7</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">8</span></td><td><span class="date-num">9</span></td><td><span class="date-num">10</span></td><td><span class="date-num">11</span></td><td><span class="date-num">12</span></td><td><span class="date-num">13</span></td><td><span class="date-num">14</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">15</span></td><td><span class="date-num">16</span></td><td><span class="date-num">17</span></td><td><span class="date-num">18</span></td><td><span class="date-num">19</span></td><td><span class="date-num">20</span></td><td><span class="date-num">21</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date-num">22</span></td><td><span class="date-num">23</span></td><td><span class="date-num">24</span></td><td><span class="date-num">25</span></td><td><span class="date-num">26</span></td><td><span class="date-num">27</span></td><td><span class="date-num">28</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
     </main>
 
@@ -246,11 +412,19 @@
         const monthsData = [
             { id: 'month-3', title: '2026年3月' },
             { id: 'month-4', title: '2026年4月' },
-            { id: 'month-5', title: '2026年5月' }
-            // 6月以降を追加する場合はここに書き足します
+            { id: 'month-5', title: '2026年5月' },
+            { id: 'month-6', title: '2026年6月' },
+            { id: 'month-7', title: '2026年7月' },
+            { id: 'month-8', title: '2026年8月' },
+            { id: 'month-9', title: '2026年9月' },
+            { id: 'month-10', title: '2026年10月' },
+            { id: 'month-11', title: '2026年11月' },
+            { id: 'month-12', title: '2026年12月' },
+            { id: 'month-1', title: '2027年1月' },
+            { id: 'month-2', title: '2027年2月' }
         ];
         
-        let currentMonthIndex = 0; // 最初は3月（配列の0番目）を表示
+        let currentMonthIndex = 2; // 最初は5月（配列の2番目）を表示
 
         function changeMonth(step) {
             // 今表示されている月を隠す
